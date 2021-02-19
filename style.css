@@ -1,0 +1,115 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.middle {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+}
+
+.btn{
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  background: #f1f1f1;
+  margin: 10px;
+  border-radius: 25%;
+  box-shadow: 0 5px 20px -5px #00000070;
+  overflow: hidden;
+  position: relative;
+}
+
+/*Social Medias Colors*/
+
+.face {
+  color:rgb(59,89,152);
+}
+
+.face::before{
+  background:linear-gradient(90deg, rgba(59,89,152,1) 0%, rgba(139,157,195,1) 82%, rgba(223,227,238,1) 100%);
+  transition: 0.2s linear;
+}
+
+.twitter {
+  color:rgb(0,132,180);
+}
+
+.twitter::before{
+  background:linear-gradient(90deg, rgba(0,132,180,1) 0%, rgba(0,172,237,1) 58%, rgba(29,202,255,1) 100%);
+  transition: 0.2s linear;
+}
+
+.insta {
+  color:#c1558b;
+}
+
+.insta::before{
+  background:linear-gradient(90deg, rgba(255,223,158,1) 0%, rgba(255,194,115,1) 37%, rgba(229,105,105,1) 58%, rgba(193,85,139,1) 74%, rgba(138,73,161,1) 100%);
+  transition: 0.2s linear;
+}
+
+.youtube {
+  color:rgb(144,3,12);
+}
+
+.youtube::before{
+  background:linear-gradient(90deg, rgba(144,3,12,1) 0%, rgba(191,38,38,1) 46%, rgba(238,15,15,1) 73%, rgba(236,183,183,1) 93%);
+  transition: 0.2s linear;
+}
+
+.git {
+  color:#6e5494;
+}
+
+.git::before{
+  background:linear-gradient(90deg, rgba(36,41,46,1) 20%, rgba(43,49,55,1) 68%);
+  transition: 0.2s linear;
+}
+
+/*Icons Effects*/
+
+.btn i {
+  line-height: 90px;
+  font-size: 26px;
+  transition: 0.2s linear;
+}
+
+.btn:hover i {
+  transform: scale(1.5);
+  color: #f1f1f1;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  transform: rotate(45deg);
+  left: -110%;
+  top: 90%;
+}
+
+.btn:hover::before {
+  animation: aaa 0.8s 1;
+  top: -10%;
+  left: -10%;
+}
+
+@keyframes aaa {
+  0{
+    top: -110%;
+    top: 90%;
+  }
+  50{
+    left: 10%;
+    top: -30%;
+  }
+  100{
+    top: -10%;
+    left: -10%;
+  }
+}
